@@ -2,9 +2,40 @@ import { Header } from './components/Header';
 import { Sidebar } from './components/Sidebar';
 import { Post } from './components/Post';
 
+import styles from './App.module.css';
+
 import './global.css';
 
-import styles from './App.module.css';
+const posts = [
+    {
+        id: 0,
+        author: {
+            avatarUrl: "https://github.com/hosanabarcelos.png",
+            name: "Hosana Barcelos",
+            role: "Developer"
+        },
+        content: [
+            { type: 'paragraph', content: 'Eaí, guys! 👽'},
+            { type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa.'},
+            { type: 'link', content: 'hb.com/hb'},
+        ],
+        publishedAt: new Date('2023-02-19 15:00:00')
+    },
+    {
+        id: 1,
+        author: {
+            avatarUrl: "https://github.com/hosanabarcelos.png",
+            name: "Hosana Barcelos",
+            role: "Web Developer"
+        },
+        content: [
+            { type: 'paragraph', content: 'Um projeto de outro planeta! 👽'},
+            { type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa.'},
+            { type: 'link', content: 'hsn.com/hsn'},
+        ],
+        publishedAt: new Date('2023-02-19 15:00:00')
+    },
+];
 
 export function App() {
   return (
@@ -15,8 +46,15 @@ export function App() {
             <Sidebar />
 
             <main>
-                <Post />
-                <Post />
+               {posts.map(post => {
+                   return (
+                        <Post 
+                            author={post.author}
+                            content={post.content}
+                            publishedAt={post.publishedAt}
+                        />
+                    )
+               })}
             </main>
         </div>
     </div>
