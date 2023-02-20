@@ -16,7 +16,7 @@ const posts = [
         },
         content: [
             { type: 'paragraph', content: 'Eaí, guys! 👽'},
-            { type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa.'},
+            { type: 'paragraph', content: 'Acabei de subir mais um projeto usando React!'},
             { type: 'link', content: 'hb.com/hb'},
         ],
         publishedAt: new Date('2023-02-19 15:00:00')
@@ -30,7 +30,7 @@ const posts = [
         },
         content: [
             { type: 'paragraph', content: 'Um projeto de outro planeta! 👽'},
-            { type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa.'},
+            { type: 'paragraph', content: 'Acabei de subir mais um projeto usando Vue!'},
             { type: 'link', content: 'hsn.com/hsn'},
         ],
         publishedAt: new Date('2023-02-19 15:00:00')
