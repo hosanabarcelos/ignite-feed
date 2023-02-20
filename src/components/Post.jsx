@@ -9,7 +9,7 @@ import styles from './Post.module.css';
 
 export function Post({author, publishedAt, content}) {
     const [comments, setComments] = useState([
-        'LOL, Genial! :o'
+        'LOL'
     ]);
 
     const [newCommentText, setNewCommentText] = useState('');
